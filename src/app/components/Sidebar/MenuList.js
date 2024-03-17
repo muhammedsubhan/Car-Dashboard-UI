@@ -2,41 +2,41 @@ export const menuItems = [
   {
     title: "Dashboard",
     icon: "/icons/dashboard.png",
-    link: "/",
+    link: "/dashboard",
   },
   {
     title: "Assets",
     icon: "/icons/assets.png",
-    link: "/assets",
+    link: "/dashboard/assets",
   },
   {
     title: "Booking",
     icon: "/icons/booking.png",
-    link: "/booking",
+    link: "/dashboard/booking",
   },
   {
     title: "Sell Cars",
     icon: "/icons/sell-cars.png",
-    link: "/sell-cars",
+    link: "/dashboard/sell-cars",
   },
   {
     title: "Buy Cars",
     icon: "/icons/buy-cars.png",
-    link: "/buy-cars",
+    link: "/dashboard/buy-cars",
   },
   {
     title: "Services",
     icon: "/icons/services.png",
-    link: "/services",
+    link: "/dashboard/services",
   },
   {
     title: "Calender",
     icon: "/icons/calender.png",
-    link: "/calender",
+    link: "/dashboard/calender",
   },
   {
     title: "Messages",
     icon: "/icons/messages.png",
-    link: "/messages",
+    link: "/dashboard/messages",
   },
 ];

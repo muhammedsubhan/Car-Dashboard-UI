@@ -4,8 +4,8 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <div className="w-full flex flex-col">
-        <div className="bg-white h-16 w-full flex items-center justify-between px-5 border-2">
+      <div className="w-full flex flex-col sticky top-0">
+        <div className="bg-white h-20 w-full flex items-center justify-between px-8 border-l">
           <div className="flex items-center  rounded-md bg-gray-100 border-2 px-2">
             <Image
               src="/icons/magnify.png"
