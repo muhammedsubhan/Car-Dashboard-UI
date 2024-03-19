@@ -1,6 +1,7 @@
 import SplineAreaChart from "@/app/ChartsUI/SplineAreaChart";
 import AssetsCard from "@/app/MaterialUI/AssetsCard";
 import NotiesCard from "@/app/MaterialUI/NotiesCard";
+import ReminderCard from "@/app/MaterialUI/ReminderCard";
 
 import Image from "next/image";
 import React from "react";
@@ -72,6 +73,7 @@ const Assets = () => {
                 <NotiesCard />
                 <AssetsCard />
               </div>
+              <ReminderCard />
             </div>
           </div>
         </div>
