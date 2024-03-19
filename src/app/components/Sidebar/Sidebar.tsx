@@ -9,7 +9,7 @@ const Sidebar = () => {
   const pathname = usePathname();
   return (
     <>
-      <div className="sticky top-0">
+      <div className="sticky top-0 ">
         <div className=" h-screen min-w-56 bg-white flex flex-col justify-between md:hidden">
           <div>
             <div className="flex items-center gap-3 px-6 py-7">

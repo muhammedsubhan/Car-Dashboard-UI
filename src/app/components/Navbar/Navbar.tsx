@@ -6,7 +6,7 @@ import { GrMenu } from "react-icons/gr";
 const Navbar = () => {
   return (
     <>
-      <div className="w-full flex flex-col sticky top-0">
+      <div className="w-full flex flex-col sticky top-0 z-50">
         <div className="bg-white h-20 w-full flex items-center justify-between px-8 border-l sm:px-4">
           <div className="hidden md:flex">
             <GrMenu className="text-2xl" />

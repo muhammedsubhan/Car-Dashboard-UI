@@ -4,7 +4,7 @@ import { carData } from "./data";
 
 const Dashboard = () => {
   return (
-    <div className="bg-slate-100 ">
+    <div className="bg-slate-100">
       <div className="flex items-center justify-between border-2 border-red-600 px-10 ">
         {carData.map((car) => {
           return (
