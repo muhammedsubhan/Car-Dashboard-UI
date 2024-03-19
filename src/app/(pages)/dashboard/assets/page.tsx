@@ -1,4 +1,5 @@
 import SplineAreaChart from "@/app/ChartsUI/SplineAreaChart";
+import AssetsCard from "@/app/MaterialUI/AssetsCard";
 import NotiesCard from "@/app/MaterialUI/NotiesCard";
 
 import Image from "next/image";
@@ -67,8 +68,9 @@ const Assets = () => {
                 </div>
                 <SplineAreaChart />
               </div>
-              <div>
+              <div className="flex gap-8">
                 <NotiesCard />
+                <AssetsCard />
               </div>
             </div>
           </div>

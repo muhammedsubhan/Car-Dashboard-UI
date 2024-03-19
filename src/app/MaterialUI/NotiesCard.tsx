@@ -13,7 +13,7 @@ const NotiesCard = () => {
             boxShadow: "none",
           }}
         >
-          <CardContent>
+          <CardContent className="mt-2">
             <Typography sx={{ fontSize: 24, fontWeight: "bold" }} variant="h1">
               Noties
             </Typography>
