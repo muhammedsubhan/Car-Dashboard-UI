@@ -9,7 +9,7 @@ import React from "react";
 const Assets = () => {
   return (
     <>
-      <div className="bg-slate-100 border-2 border-red-500 py-5 px-8">
+      <div className="bg-slate-100 py-5 px-8">
         <div className="flex flex-col gap-5 w-full">
           <div>
             <h1 className="text-2xl font-semibold">Assets</h1>

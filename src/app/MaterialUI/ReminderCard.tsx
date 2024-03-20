@@ -60,7 +60,15 @@ const ReminderCard = () => {
           >
             Reminder
           </Typography>
-          <Button variant="contained" sx={{ background: "#A162F7" }}>
+          <Button
+            sx={{
+              background: "#A162F7",
+              color: "white",
+              "&:hover": {
+                backgroundColor: "#8A2BE2",
+              },
+            }}
+          >
             + Add New
           </Button>
         </div>
@@ -100,9 +108,9 @@ const ReminderCard = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {rows.map((row, index) => (
               <TableRow
-                key={row.name}
+                key={row.name + index}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
