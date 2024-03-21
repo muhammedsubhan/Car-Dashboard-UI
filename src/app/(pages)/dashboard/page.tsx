@@ -1,11 +1,50 @@
 import Image from "next/image";
 import React from "react";
-import { carData } from "./data";
+import { carData, GuageCardData } from "./data";
+import GuageCard from "@/app/MaterialUI/GuageCard";
+import DistributedColumnsChart from "@/app/ChartsUI/DistributedColumnsChart";
 
 const Dashboard = () => {
   return (
-    <div className="bg-slate-100">
-      <div className="flex items-center justify-between border-2 border-red-600 px-10 ">
+    <div className="bg-slate-100 py-5 px-8">
+      <div>
+        <div>
+          <h1 className="text-2xl font-semibold">Dashboard</h1>
+        </div>
+        <div className="py-6">
+          <div className="flex items-center  gap-10 flex-wrap">
+            {GuageCardData.map((item) => {
+              return <GuageCard key={item.id} item={item} />;
+            })}
+          </div>
+        </div>
+        <div>
+          <div className="bg-white w-[560px] flex flex-col rounded-3xl">
+            <div className="px-8 mt-3 py-3">
+              <p className="text-black text-2xl font-semibold">
+                Miles <span className=" font-normal">Statistics</span>
+              </p>
+              <div className="flex items-center justify-between mt-6">
+                <div className="flex items-center gap-5">
+                  <p className="bg-blue-500 px-4 text-white font-medium py-0.5 rounded-2xl">
+                    Day{" "}
+                  </p>
+                  <p className="text-gray-600 font-medium">Week </p>
+                  <p className="text-gray-600 font-medium">Month </p>
+                </div>
+                <div>
+                  <p className="text-xl font-semibold text-gray-500">
+                    265 Miles
+                  </p>
+                </div>
+              </div>
+            </div>
+            <DistributedColumnsChart />
+          </div>
+          <div></div>
+        </div>
+      </div>
+      {/* <div className="flex items-center justify-between border-2 border-red-600 px-10 ">
         {carData.map((car) => {
           return (
             <div
@@ -63,7 +102,7 @@ const Dashboard = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };
