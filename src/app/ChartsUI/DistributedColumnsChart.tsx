@@ -52,7 +52,7 @@ const DistributedColumnsChart = () => {
   };
 
   return (
-    <div className="w-[550px]">
+    <div className="w-[580px]">
       <ReactApexCharts
         options={options}
         series={options.series}

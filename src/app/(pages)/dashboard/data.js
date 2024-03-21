@@ -6,7 +6,7 @@ export const carData = [
     likes: 132,
     perhour: 32,
     image: "/mini-cooper.png",
-    bgColor: "bg-yellow-100",
+    bgColor: "#E1DFA4",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const carData = [
     likes: 130,
     perhour: 28,
     image: "/porsche-911.png",
-    bgColor: "bg-blue-100",
+    bgColor: "#E3ECF1",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const carData = [
     likes: 130,
     perhour: 28,
     image: "/mini-cooper.png",
-    bgColor: "bg-red-100",
+    bgColor: "#F4E3E5",
   },
 ];
 
