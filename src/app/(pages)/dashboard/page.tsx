@@ -69,11 +69,7 @@ const Dashboard = () => {
           </div>
           <div className="mt-3 flex items-center justify-center  gap-6">
             {carData.map((car) => {
-              return (
-                <>
-                  <DashboardCarsCard key={car.id} car={car} />
-                </>
-              );
+              return <DashboardCarsCard key={car.id} car={car} />;
             })}
           </div>
         </div>

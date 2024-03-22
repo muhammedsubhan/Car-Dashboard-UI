@@ -1,7 +1,8 @@
-import Image from "next/image";
 import React from "react";
 import NavbarInput from "../NavbarInput/NavbarInput";
 import { GrMenu } from "react-icons/gr";
+import NavbarMenu from "@/app/MaterialUI/NavbarMenu";
+import NotificationCard from "@/app/MaterialUI/NotificationCard";
 
 const Navbar = () => {
   return (
@@ -15,20 +16,8 @@ const Navbar = () => {
             <NavbarInput />
           </div>
           <div className="flex items-center gap-8">
-            <Image
-              src="/icons/bell-icon.png"
-              alt="bell-icon"
-              width={20}
-              height={20}
-            />
-            <Image
-              src="/profile-pic.png"
-              alt="bell-icon"
-              className="rounded-full"
-              width={50}
-              height={50}
-              priority
-            />
+            <NotificationCard />
+            <NavbarMenu />
           </div>
         </div>
       </div>

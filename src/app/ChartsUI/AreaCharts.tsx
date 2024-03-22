@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import ReactApexCharts from "react-apexcharts"; // Import ReactApexCharts directly
+import ReactApexCharts from "react-apexcharts";
 
 const AreaChart = () => {
-  // Function to generate sample data
   const generateDayWiseTimeSeries = (baseval, count, yrange) => {
     let i = 0;
     let series = [];
