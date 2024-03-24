@@ -1,6 +1,10 @@
 import TrackingHistoryChart from "@/app/ChartsUI/TrackingHistoryChart";
+import CarModelSelector from "@/app/MaterialUI/CarModelSelector";
+import ConditionSelector from "@/app/MaterialUI/ConditionSelector";
+import SellCarsOffers from "@/app/components/SellCarsOffers";
 import Image from "next/image";
 import React from "react";
+import { Offers } from "./data";
 
 const SellCars = () => {
   return (
@@ -34,6 +38,20 @@ const SellCars = () => {
               <TrackingHistoryChart />
             </div>
           </div>
+        </div>
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-semibold">Offers</h1>
+          </div>
+          <div className="flex items-center gap-2">
+            <ConditionSelector />
+            <CarModelSelector />
+          </div>
+        </div>
+        <div>
+          {Offers.map((item) => {
+            return <SellCarsOffers key={item.id} item={item} />;
+          })}
         </div>
       </div>
     </>
