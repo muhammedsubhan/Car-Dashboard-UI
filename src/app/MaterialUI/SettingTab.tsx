@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Profile from "../components/Profile/Profile";
+import SettingsPassword from "../components/SettingsPassword/SettingsPassword";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -57,19 +58,15 @@ const SettingTab = () => {
               scrollButtons="auto"
               variant="scrollable"
             >
-              <Tab label="My details" {...a11yProps(0)} />
-              <Tab label="Profile" {...a11yProps(1)} />
-              <Tab label="Password" {...a11yProps(2)} />
+              <Tab label="Profile" {...a11yProps(0)} />
+              <Tab label="Password" {...a11yProps(1)} />
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
-            details
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={1}>
             <Profile />
           </CustomTabPanel>
-          <CustomTabPanel value={value} index={2}>
-            Passowrd
+          <CustomTabPanel value={value} index={1}>
+            <SettingsPassword />
           </CustomTabPanel>
         </Box>
       </div>
