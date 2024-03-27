@@ -20,11 +20,6 @@ export const menuItems = [
     link: "/dashboard/sell-cars",
   },
   {
-    title: "Buy Cars",
-    icon: "/icons/buy-cars.png",
-    link: "/dashboard/buy-cars",
-  },
-  {
     title: "Services",
     icon: "/icons/services.png",
     link: "/dashboard/services",
