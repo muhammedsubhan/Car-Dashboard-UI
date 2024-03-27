@@ -1,6 +1,7 @@
 import React from "react";
 import { BookingData } from "./data";
 import ServicesTimeLine from "@/app/MaterialUI/ServicesTimeLine";
+import ServiceRadio from "@/app/MaterialUI/ServiceRadio";
 const Services = () => {
   return (
     <>
@@ -37,7 +38,7 @@ const Services = () => {
               <p className="text-gray-500 font-medium">Current Station</p>
             </div>
           </div>
-          <div className="mt-10  flex justify-between gap-8">
+          <div className="mt-16  flex justify-between gap-8">
             <div className="bg-white rounded-lg min-w-[250px] min-h-[290px] flex flex-col items-center justify-center">
               <div>
                 <p className="text-xl font-semibold ">Your Order</p>
@@ -95,6 +96,14 @@ const Services = () => {
           </div>
           <div className="bg-white mt-5 rounded-lg">
             <ServicesTimeLine />
+          </div>
+          <div className="py-5">
+            <div>
+              <h1 className="text-2xl font-semibold">Service Schedule</h1>
+            </div>
+            <div>
+              <ServiceRadio />
+            </div>
           </div>
         </div>
       </div>
