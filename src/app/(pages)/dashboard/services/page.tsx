@@ -42,9 +42,28 @@ const Services = () => {
               </div>
             </div>
             <div className="mt-16  flex justify-between gap-8">
-              <div className="bg-white rounded-lg min-w-[250px] min-h-[290px] flex flex-col items-center justify-center">
+              <div className="bg-white rounded-lg min-w-[250px] min-h-[300px] flex flex-col items-center justify-center gap-4">
                 <div>
                   <p className="text-xl font-semibold ">Your Order</p>
+                </div>
+                <div className="rounded-full border-8 border-red-500 p-4  flex items-center justify-center">
+                  <div className="w-[170px]  rounded-full border-8 border-purple-500 h-[170px] flex items-center justify-center ">
+                    <div className="w-[130px]  rounded-full border-8 border-green-500 h-[130px] flex items-center justify-center ">
+                      <div className="bg-gray-200 w-[110px] h-[110px] rounded-full flex items-center justify-center">
+                        <div className="flex flex-col items-center justify-center gap-1">
+                          <small className="font-semibold text-gray-600">
+                            Service{" "}
+                          </small>
+                          <small className="font-semibold text-gray-600">
+                            Time
+                          </small>
+                          <p className="text-2xl text-purple-500 font-bold">
+                            5, 2h
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="w-full flex flex-col gap-4">
