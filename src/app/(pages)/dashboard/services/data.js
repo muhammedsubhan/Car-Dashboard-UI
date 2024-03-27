@@ -120,3 +120,42 @@ export const BookingData = [
     textcolor: "text-gray-500",
   },
 ];
+
+export const carCondition = [
+  {
+    id: 1,
+    title: "Oil Level",
+    part: "Engine",
+    replace: "Don't Replace",
+    level: "80",
+    progressColor: "#A162F7",
+    image: "/pic1.png",
+  },
+  {
+    id: 2,
+    title: "Break Pads",
+    part: "Wheels",
+    replace: "Still Good",
+    level: "70",
+    progressColor: "#70CF97",
+    image: "/pic2.png",
+  },
+  {
+    id: 3,
+    title: "Steering",
+    part: "Drivetrain",
+    replace: "Need Change",
+    level: "55",
+    progressColor: "#F6CC0D",
+    image: "/pic3.png",
+  },
+  {
+    id: 4,
+    title: "Oil Level",
+    part: "Engine",
+    replace: "Don't Replace",
+    level: "80",
+    progressColor: "#FF764C",
+    image: "/pic1.png",
+  },
+];
