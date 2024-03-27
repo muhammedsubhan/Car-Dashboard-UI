@@ -1,5 +1,6 @@
 import React from "react";
 import { BookingData } from "./data";
+import ServicesTimeLine from "@/app/MaterialUI/ServicesTimeLine";
 const Services = () => {
   return (
     <>
@@ -90,9 +91,11 @@ const Services = () => {
         </div>
         <div className="w-full">
           <div>
-            <h1 className="text-2xl font-semibold">Service Station</h1>
+            <h1 className="text-2xl font-semibold">Service Required</h1>
           </div>
-          <div className="bg-white mt-5"></div>
+          <div className="bg-white mt-5 rounded-lg">
+            <ServicesTimeLine />
+          </div>
         </div>
       </div>
     </>
