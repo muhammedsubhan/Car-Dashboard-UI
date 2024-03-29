@@ -42,8 +42,6 @@ const SignIn = () => {
       return;
     }
 
-    // Your authentication logic goes here...
-    // Simulating a successful authentication for demonstration
     setSuccess(true);
     setError(null);
     console.log(formData);

@@ -8,6 +8,46 @@ import { FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+  });
+
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<boolean>(false);
+
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = () => {
+    if (!formData.email || !formData.password) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
+    if (formData.password.length < 8) {
+      setError("Password must be at least 8 characters long.");
+      return;
+    }
+
+    setSuccess(true);
+    setError(null);
+    console.log(formData);
+    setFormData({
+      firstname: "",
+      lastname: "",
+      email: "",
+      password: "",
+    });
+  };
 
   const togglePasswordVisibility = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -70,6 +110,9 @@ const SignUp = () => {
                       <input
                         id="firstname"
                         type="text"
+                        name="firstname"
+                        onChange={handleOnChange}
+                        value={formData.firstname}
                         placeholder="Enter First Name"
                         className="h-[50px] px-3 focus:outline-none rounded-md border-gray-200 border-2 text-gray-500 font-normal"
                       />
@@ -82,6 +125,9 @@ const SignUp = () => {
                       <input
                         id="lastname"
                         type="text"
+                        name="lastname"
+                        onChange={handleOnChange}
+                        value={formData.lastname}
                         placeholder="Enter Last Name"
                         className="h-[50px] px-3 focus:outline-none rounded-md border-gray-200 border-2 text-gray-500 font-normal"
                       />
@@ -91,6 +137,9 @@ const SignUp = () => {
                       <input
                         id="email"
                         type="email"
+                        name="email"
+                        onChange={handleOnChange}
+                        value={formData.email}
                         placeholder="Email"
                         className="h-[50px] px-3 focus:outline-none rounded-md border-gray-200 border-2 text-gray-500 font-normal"
                       />
@@ -103,6 +152,9 @@ const SignUp = () => {
                       <div className="w-full flex items-center rounded-md border-gray-200 border-2">
                         <input
                           id="password"
+                          name="password"
+                          onChange={handleOnChange}
+                          value={formData.password}
                           type={showPassword ? "text" : "password"}
                           placeholder="Password"
                           className="h-[50px] w-full px-3 focus:outline-none rounded-md text-gray-500 font-normal"
@@ -114,6 +166,16 @@ const SignUp = () => {
                           {showPassword ? <FaEyeSlash /> : <FaEye />}
                         </button>
                       </div>
+                      {error && (
+                        <p className="text-red-500  mt-2 p-2 bg-red-200">
+                          {error}
+                        </p>
+                      )}
+                      {success && (
+                        <p className="text-green-500 mt-2 p-2 bg-green-200">
+                          Your Account is Created
+                        </p>
+                      )}
                     </form>
                   </div>
                   <div className="flex items-center justify-between ">
@@ -129,7 +191,10 @@ const SignUp = () => {
                     </p> */}
                   </div>
                   <div className="flex justify-center mt-8 xs:mt-5">
-                    <button className="bg-purple-500 font-semibold text-white p-3 w-full rounded-md">
+                    <button
+                      onClick={handleSubmit}
+                      className="bg-purple-500 font-semibold text-white p-3 w-full rounded-md"
+                    >
                       Sign up
                     </button>
                   </div>
