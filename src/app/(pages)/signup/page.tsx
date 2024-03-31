@@ -2,9 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { PrismaClient } from "@prisma/client";
 
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { db } from "@/app/libs/db";
+import { login } from "@/app/actions/signup";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -27,7 +30,7 @@ const SignUp = () => {
     }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!formData.email || !formData.password) {
       setError("Please fill in all fields.");
       return;
@@ -38,9 +41,15 @@ const SignUp = () => {
       return;
     }
 
-    setSuccess(true);
-    setError(null);
-    console.log(formData);
+    const response = await login(formData);
+    console.log(response);
+    if (response.error) {
+      setError(response.error);
+      setSuccess(false);
+    } else {
+      setSuccess(true);
+      setError(null);
+    }
     setFormData({
       firstname: "",
       lastname: "",
@@ -55,6 +64,7 @@ const SignUp = () => {
     e.preventDefault();
     setShowPassword(!showPassword);
   };
+
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-gray-100 py-10">
@@ -173,7 +183,7 @@ const SignUp = () => {
                       )}
                       {success && (
                         <p className="text-green-500 mt-2 p-2 bg-green-200">
-                          Your Account is Created
+                          Email is Sent
                         </p>
                       )}
                     </form>
