@@ -21,7 +21,8 @@ const Dashboard = () => {
               })}
             </div>
           </div>
-          <div className="flex items-center justify-center gap-10">
+
+          <div className="flex items-center justify-center gap-10 lg:flex-col">
             <div className="bg-white w-[580px] flex flex-col rounded-3xl">
               <div className="px-8 mt-3 py-3">
                 <p className="text-black text-2xl font-semibold">
@@ -67,7 +68,7 @@ const Dashboard = () => {
               <AreaChart />
             </div>
           </div>
-          <div className="mt-3 flex items-center justify-center  gap-6">
+          <div className="mt-3 flex items-center justify-center gap-6 lg:flex-wrap">
             {carData.map((car) => {
               return <DashboardCarsCard key={car.id} car={car} />;
             })}

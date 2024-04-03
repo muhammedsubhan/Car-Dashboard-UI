@@ -1,4 +1,5 @@
 "use client";
+import { signin } from "@/app/actions/signin";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -31,7 +32,7 @@ const SignIn = () => {
     }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!formData.email || !formData.password) {
       setError("Please fill in all fields.");
       return;
@@ -41,6 +42,8 @@ const SignIn = () => {
       setError("Password must be at least 8 characters long.");
       return;
     }
+
+    await signin(formData);
 
     setSuccess(true);
     setError(null);
