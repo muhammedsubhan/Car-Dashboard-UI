@@ -8,7 +8,13 @@ import { menuItems } from "../components/Sidebar/MenuList";
 import Link from "next/link";
 import Image from "next/image";
 
-const SidebarDrawer = ({ toggleDrawer, open }) => {
+const SidebarDrawer = ({
+  toggleDrawer,
+  open,
+}: {
+  toggleDrawer: any;
+  open: any;
+}) => {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>

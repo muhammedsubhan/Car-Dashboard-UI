@@ -1,14 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import ReactApexChart from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
 
-const RadialBarChart = ({ item }) => {
+const RadialBarChart = ({ item }: { item: any }) => {
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  const options = {
+  const options: ApexOptions = {
     chart: {
       height: 200,
       type: "radialBar",
@@ -30,7 +31,7 @@ const RadialBarChart = ({ item }) => {
           endAngle: 135,
         },
         dataLabels: {
-          showOn: "always",
+          // showOn: "always",
           name: {
             offsetY: -10,
             show: true,
@@ -62,7 +63,7 @@ const RadialBarChart = ({ item }) => {
           options={options}
           series={options.series}
           type="radialBar"
-          height={options.chart.height}
+          height={options?.chart?.height}
         />
       )}
     </div>

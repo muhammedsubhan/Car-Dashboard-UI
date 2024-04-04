@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import ReactApexCharts from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
 
-const OffersGuagesChart = ({ item }) => {
-  const options = {
+const OffersGuagesChart = ({ item }: { item: any }) => {
+  const options: ApexOptions = {
     series: [44, 55, 67, 83],
     chart: {
       height: 350,

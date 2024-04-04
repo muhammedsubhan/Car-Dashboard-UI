@@ -4,7 +4,7 @@ import ImpressionShareGuage from "../ChartsUI/ImpressionShareGuage";
 import OffersGuagesChart from "../ChartsUI/OffersGuagesChart";
 import Image from "next/image";
 
-const SellCarsOffers = ({ item }) => {
+const SellCarsOffers = ({ item }: { item: any }) => {
   return (
     <>
       <div className="bg-white p-10 rounded-2xl flex items-center mt-8 justify-between">

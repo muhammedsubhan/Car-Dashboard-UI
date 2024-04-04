@@ -5,7 +5,7 @@ import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 
-const ProgressBar = ({ condition }) => {
+const ProgressBar = ({ condition }: { condition: any }) => {
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 7,
     width: 150,

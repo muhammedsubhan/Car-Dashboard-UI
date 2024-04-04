@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import ReactApexCharts from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
 
-const ImpressionShareGuage = ({ item }) => {
-  const options = {
-    series: [`${item.impression}`],
+const ImpressionShareGuage = ({ item }: { item: any }) => {
+  const options: ApexOptions = {
+    series: [item.impression],
 
     chart: {
       type: "radialBar",

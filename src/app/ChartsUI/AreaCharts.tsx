@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import ReactApexCharts from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
 
 const AreaChart = () => {
-  const generateDayWiseTimeSeries = (baseval, count, yrange) => {
+  const generateDayWiseTimeSeries = (baseval: any, count: any, yrange: any) => {
     let i = 0;
     let series = [];
     while (i < count) {
@@ -17,7 +18,7 @@ const AreaChart = () => {
     return series;
   };
 
-  const options = {
+  const options: ApexOptions = {
     series: [
       {
         name: "South",

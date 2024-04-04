@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
 
 const SplineAreaChart = () => {
-  const options = {
+  const options: ApexOptions = {
     series: [
       {
         name: "Traveled last month",
@@ -49,7 +50,7 @@ const SplineAreaChart = () => {
         options={options}
         series={options.series}
         type="area"
-        height={options.chart.height}
+        height={options?.chart?.height}
       />
     </div>
   );

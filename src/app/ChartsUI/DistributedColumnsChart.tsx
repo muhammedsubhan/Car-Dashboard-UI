@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import ReactApexCharts from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
 
 const DistributedColumnsChart = () => {
-  const options = {
+  const options: ApexOptions = {
     series: [
       {
         data: [21, 22, 10, 28, 16, 21, 40],

@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Image from "next/image";
 import RadialBarChart from "../ChartsUI/RadialBarChart";
 
-const GuageCard = ({ item }) => {
+const GuageCard = ({ item }: { item: any }) => {
   return (
     <>
       <div>

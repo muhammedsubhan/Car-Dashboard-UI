@@ -2,7 +2,7 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Image from "next/image";
-const DashboardCarsCard = ({ car }) => {
+const DashboardCarsCard = ({ car }: { car: any }) => {
   return (
     <>
       <div>
