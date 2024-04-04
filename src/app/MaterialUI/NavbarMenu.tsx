@@ -8,6 +8,7 @@ import Divider from "@mui/material/Divider";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 import Image from "next/image";
+import Link from "next/link";
 
 const NavbarMenu = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -65,26 +66,39 @@ const NavbarMenu = () => {
           transformOrigin={{ horizontal: "right", vertical: "top" }}
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
-          <MenuItem onClick={handleClose}>
-            <Avatar /> Profile
-          </MenuItem>
-          <MenuItem onClick={handleClose}>
-            <Avatar /> My account
-          </MenuItem>
+          <Link href="/dashboard/settings">
+            <MenuItem onClick={handleClose} className="mb-2">
+              <Avatar /> Profile
+            </MenuItem>
+          </Link>
+
           <Divider />
 
-          <MenuItem onClick={handleClose}>
-            <ListItemIcon>
-              <Settings fontSize="small" />
-            </ListItemIcon>
-            Settings
-          </MenuItem>
-          <MenuItem onClick={handleClose}>
-            <ListItemIcon>
-              <Logout fontSize="small" />
-            </ListItemIcon>
-            Logout
-          </MenuItem>
+          <Link href="/dashboard/settings">
+            <MenuItem onClick={handleClose} className="mb-2 mt-2">
+              <ListItemIcon>
+                <Settings fontSize="small" />
+              </ListItemIcon>
+              Change Password
+            </MenuItem>
+          </Link>
+
+          <Link href="/dashboard/settings">
+            <MenuItem onClick={handleClose} className="mb-2 mt-2">
+              <ListItemIcon>
+                <Settings fontSize="small" />
+              </ListItemIcon>
+              Settings
+            </MenuItem>
+          </Link>
+          <Link href="/signin">
+            <MenuItem onClick={handleClose}>
+              <ListItemIcon>
+                <Logout fontSize="small" />
+              </ListItemIcon>
+              Logout
+            </MenuItem>
+          </Link>
         </Menu>
       </div>
     </>
